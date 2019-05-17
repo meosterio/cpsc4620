@@ -1,0 +1,210 @@
+mysql> SOURCE ViewTables.sql;
++----------------------+-------------+------------+
+| Name                 | Percent_off | Dollar_off |
++----------------------+-------------+------------+
+| Employee             |          15 |       NULL |
+| Gameday Special      |          20 |       NULL |
+| Lunch Special Large  |        NULL |          2 |
+| Lunch Special Medium |        NULL |          1 |
+| Specialty Pizza      |        NULL |        1.5 |
++----------------------+-------------+------------+
+5 rows in set (0.01 sec)
+
++---------+-------------+-------+------+
+| Size    | Crust       | Price | Cost |
++---------+-------------+-------+------+
+| Large   | Gluten-Free |   9.5 |    4 |
+| Large   | Original    |     8 |    2 |
+| Large   | Pan         |     9 |    3 |
+| Large   | Thin        |     8 | 1.25 |
+| medium  | Gluten-Free |  6.25 |    3 |
+| medium  | Original    |     5 |  1.5 |
+| medium  | Pan         |     6 | 2.25 |
+| medium  | Thin        |     5 |    1 |
+| small   | Gluten-Free |     4 |    2 |
+| small   | Original    |     3 | 0.75 |
+| small   | Pan         |   3.5 |    1 |
+| small   | Thin        |     3 |  0.5 |
+| X-Large | Gluten-Free |  12.5 |    6 |
+| X-Large | Original    |    10 |    3 |
+| X-Large | Pan         |  11.5 |  4.5 |
+| X-Large | Thin        |    10 |    2 |
++---------+-------------+-------+------+
+16 rows in set (0.00 sec)
+
++--------------+
+| Order_Number |
++--------------+
+|            1 |
+|            2 |
+|            3 |
+|            4 |
+|            5 |
+|            6 |
+|            7 |
+|            8 |
++--------------+
+8 rows in set (0.00 sec)
+
++----+--------------+---------------------+----------------------------------------+
+| ID | Phone_Number | Name                | Address                                |
++----+--------------+---------------------+----------------------------------------+
+|  1 | 8642545861   | Andrew Wilkes-Krier | 115 Party Blvd, Anderson SC 29621      |
+|  2 | 8644749953   | Matt Engers         | NULL                                   |
+|  3 | 8642328944   | Frank Turner        | 6745 Wessex St Anderson SC 29621       |
+|  4 | 8648785679   | Milo Auckerman      | 8879 Suburban Home, Anderson, SC 29621 |
++----+--------------+---------------------+----------------------------------------+
+4 rows in set (0.00 sec)
+
++-------------------+-------+---------------+-----------+-------+--------+-------+---------+
+| Name              | Price | Cost_per_unit | Inventory | small | medium | large | x_large |
++-------------------+-------+---------------+-----------+-------+--------+-------+---------+
+| Bacon             |   1.5 |          0.25 |        99 |     1 |    1.5 |     2 |       3 |
+| Banana Peppers    |   0.5 |          0.05 |        36 |   0.6 |      1 |   1.3 |    1.75 |
+| Black Olives      |   0.6 |           0.1 |        39 |  0.75 |      1 |   1.5 |       2 |
+| Chicken           |  1.75 |          0.25 |        56 |   1.5 |      2 |  2.25 |       3 |
+| Feta Cheese       |     2 |          0.18 |        75 |  1.75 |      3 |     4 |     5.5 |
+| Four Cheese Blend |     2 |          0.15 |       150 |     2 |    3.5 |     5 |       7 |
+| Goat Cheese       |     2 |           0.2 |        54 |   1.6 |   2.75 |     4 |     5.5 |
+| Green Pepper      |   0.5 |          0.02 |        79 |     1 |    1.5 |     2 |    2.25 |
+| Ham               |   1.5 |          0.15 |        78 |     2 |    2.5 |  3.25 |       4 |
+| Jalapenos         |   0.5 |          0.05 |        64 |   0.5 |   0.75 |  1.25 |    1.75 |
+| Mushrooms         |  0.75 |           0.1 |        52 |   1.5 |      2 |   2.5 |       3 |
+| Onion             |   0.5 |          0.02 |        85 |     1 |    1.5 |     2 |    2.75 |
+| Pepperoni         |  1.25 |           0.2 |       100 |     2 |   2.75 |   3.5 |     4.5 |
+| Pineapple         |     1 |          0.25 |        15 |     1 |   1.25 |  1.75 |       2 |
+| Regular Cheese    |   1.5 |          0.12 |       250 |     2 |    3.5 |     5 |       7 |
+| Roma tomato       |  0.75 |          0.03 |        86 |     2 |      3 |   3.5 |     4.5 |
+| Sausage           |  1.25 |          0.15 |       100 |   2.5 |      3 |   3.5 |    4.25 |
++-------------------+-------+---------------+-----------+-------+--------+-------+---------+
+17 rows in set (0.00 sec)
+
++----------+-------+------+-------------------+---------------------+-------------+---------+--------------+
+| Name     | Price | Cost | Completion_Status | Timestamp           | Crust       | Size    | Order_Number |
++----------+-------+------+-------------------+---------------------+-------------+---------+--------------+
+| Pizza 1  |  13.5 | 3.68 |                 1 | 2019-03-05 12:03:00 | Thin        | large   |            1 |
+| Pizza 10 |  14.5 | 5.59 |                 1 | 2019-03-05 07:11:00 | Original    | X-Large |            5 |
+| Pizza 11 |    17 | 5.59 |                 1 | 2019-03-05 07:11:00 | Original    | X-Large |            5 |
+| Pizza 12 |    14 | 5.68 |                 1 | 2019-03-05 07:11:00 | Original    | X-Large |            5 |
+| Pizza 13 | 16.85 | 7.85 |                 1 | 2019-03-02 05:30:00 | Gluten-Free | X-Large |            6 |
+| Pizza 14 | 13.25 |  3.2 |                 1 | 2019-03-02 06:17:00 | Thin        | Large   |            7 |
+| Pizza 15 |    12 | 3.75 |                 1 | 2019-03-06 07:22:00 | Thin        | Large   |            8 |
+| Pizza 16 |    12 | 2.55 |                 1 | 2019-03-06 07:22:00 | Thin        | Large   |            8 |
+| Pizza 2  |  10.6 | 3.23 |                 1 | 2019-03-03 12:05:00 | Pan         | medium  |            2 |
+| Pizza 3  |  6.75 |  1.4 |                 1 | 2019-03-03 12:05:00 | Original    | small   |            3 |
+| Pizza 4  | 10.75 |  3.3 |                 1 | 2019-03-03 09:30:00 | Original    | Large   |            4 |
+| Pizza 5  | 10.75 |  3.3 |                 1 | 2019-03-03 09:30:00 | Original    | Large   |            4 |
+| Pizza 6  | 10.75 |  3.3 |                 1 | 2019-03-03 09:30:00 | Original    | Large   |            4 |
+| Pizza 7  | 10.75 |  3.3 |                 1 | 2019-03-03 09:30:00 | Original    | Large   |            4 |
+| Pizza 8  | 10.75 |  3.3 |                 1 | 2019-03-03 09:30:00 | Original    | Large   |            4 |
+| Pizza 9  | 10.75 |  3.3 |                 1 | 2019-03-03 09:30:00 | Original    | Large   |            4 |
++----------+-------+------+-------------------+---------------------+-------------+---------+--------------+
+16 rows in set (0.00 sec)
+
++--------------+--------------+
+| Table_Number | Order_Number |
++--------------+--------------+
+|           14 |            1 |
+|            4 |            2 |
+|            4 |            3 |
++--------------+--------------+
+3 rows in set (0.00 sec)
+
++------+--------------+
+| Seat | Order_Number |
++------+--------------+
+|    1 |            1 |
+|    2 |            1 |
+|    3 |            1 |
+|    1 |            2 |
+|    2 |            3 |
++------+--------------+
+5 rows in set (0.00 sec)
+
++-------------+--------------+
+| Customer_ID | Order_Number |
++-------------+--------------+
+|           1 |            4 |
+|           2 |            6 |
++-------------+--------------+
+2 rows in set (0.00 sec)
+
++-------------+--------------+
+| Customer_ID | Order_Number |
++-------------+--------------+
+|           1 |            5 |
+|           3 |            7 |
+|           4 |            8 |
++-------------+--------------+
+3 rows in set (0.00 sec)
+
++------------+-------------------+-------+--------+
+| Pizza_Name | Topping_Name      | Extra | Amount |
++------------+-------------------+-------+--------+
+| Pizza 1    | Pepperoni         |     0 |    3.5 |
+| Pizza 1    | Regular Cheese    |     1 |      5 |
+| Pizza 1    | Sausage           |     0 |    3.5 |
+| Pizza 10   | Four Cheese Blend |     0 |      7 |
+| Pizza 10   | Pepperoni         |     0 |    4.6 |
+| Pizza 10   | Sausage           |     0 |   4.25 |
+| Pizza 11   | Four Cheese Blend |     0 |      7 |
+| Pizza 11   | Ham               |     1 |      4 |
+| Pizza 11   | Pineapple         |     1 |      2 |
+| Pizza 12   | Bacon             |     0 |      3 |
+| Pizza 12   | Four Cheese Blend |     0 |      7 |
+| Pizza 12   | Jalapenos         |     0 |   1.75 |
+| Pizza 13   | Black Olives      |     0 |      2 |
+| Pizza 13   | Goat Cheese       |     0 |    5.5 |
+| Pizza 13   | Green Pepper      |     0 |    2.5 |
+| Pizza 13   | Mushrooms         |     0 |      3 |
+| Pizza 13   | Onion             |     0 |   2.75 |
+| Pizza 13   | Roma tomato       |     0 |    4.5 |
+| Pizza 14   | Chicken           |     0 |   2.25 |
+| Pizza 14   | Four Cheese Blend |     0 |      5 |
+| Pizza 14   | Green Pepper      |     0 |      2 |
+| Pizza 14   | Mushrooms         |     0 |    2.5 |
+| Pizza 14   | Onion             |     0 |      2 |
+| Pizza 15   | Four Cheese Blend |     1 |      5 |
+| Pizza 16   | Pepperoni         |     1 |    3.5 |
+| Pizza 16   | Regular Cheese    |     0 |      5 |
+| Pizza 2    | Banana Peppers    |     0 |      1 |
+| Pizza 2    | Black Olives      |     0 |      1 |
+| Pizza 2    | Feta Cheese       |     0 |      3 |
+| Pizza 2    | Mushrooms         |     0 |      2 |
+| Pizza 2    | Roma tomato       |     0 |      3 |
+| Pizza 3    | Banana Peppers    |     0 |    0.6 |
+| Pizza 3    | Chicken           |     0 |    1.5 |
+| Pizza 3    | Regular Cheese    |     0 |      2 |
+| Pizza 4    | Pepperoni         |     0 |    3.5 |
+| Pizza 4    | Regular Cheese    |     0 |      5 |
+| Pizza 5    | Pepperoni         |     0 |    3.5 |
+| Pizza 5    | Regular Cheese    |     0 |      5 |
+| Pizza 6    | Pepperoni         |     0 |    3.5 |
+| Pizza 6    | Regular Cheese    |     0 |      5 |
+| Pizza 7    | Pepperoni         |     0 |    3.5 |
+| Pizza 7    | Regular Cheese    |     0 |      5 |
+| Pizza 8    | Pepperoni         |     0 |    3.5 |
+| Pizza 8    | Regular Cheese    |     0 |      5 |
+| Pizza 9    | Pepperoni         |     0 |    3.5 |
+| Pizza 9    | Regular Cheese    |     0 |      5 |
++------------+-------------------+-------+--------+
+46 rows in set (0.00 sec)
+
++------------+----------------------+
+| Pizza_Name | Discount_Name        |
++------------+----------------------+
+| Pizza 1    | Lunch Special Large  |
+| Pizza 2    | Lunch Special Medium |
+| Pizza 11   | Specialty Pizza      |
+| Pizza 13   | Specialty Pizza      |
+| Pizza 2    | Specialty Pizza      |
++------------+----------------------+
+5 rows in set (0.00 sec)
+
++--------------+-----------------+
+| Order_Number | Discount_Name   |
++--------------+-----------------+
+|            8 | Employee        |
+|            5 | Gameday Special |
++--------------+-----------------+
+2 rows in set (0.01 sec)
